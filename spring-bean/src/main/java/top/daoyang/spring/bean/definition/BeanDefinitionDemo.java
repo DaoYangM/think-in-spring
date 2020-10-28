@@ -1,8 +1,6 @@
 package top.daoyang.spring.bean.definition;
 
-import org.springframework.beans.BeanMetadataAttribute;
 import org.springframework.beans.MutablePropertyValues;
-import org.springframework.beans.factory.support.AbstractBeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.support.GenericBeanDefinition;
 import top.daoyang.spring.ioc.overview.domain.User;

@@ -10,7 +10,7 @@
     </bean>
 
     <bean id="user2" class="top.daoyang.spring.ioc.overview.domain.User" init-method="init">
-        <property name="id" value="1" />
+        <property name="id" value="2" />
         <property name="name" value="daoyang" />
     </bean>
 

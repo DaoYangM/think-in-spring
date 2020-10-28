@@ -4,7 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <import resource="dependency-lookup.xml" />
+    <import resource="dependency-injection.xml" />
 
-    <bean id="userRepository" class="top.daoyang.spring.ioc.overview.repository.UserRepository" autowire="byType" />
+    <!-- 别名和bean是分开定义的, 并且别名是可以完全相同的, 别名相同的不同bean取得是最后一个-->
+    <alias name="user" alias="aliasUser" />
+    <alias name="userRepository" alias="aliasUser" />
 </beans>
