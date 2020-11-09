@@ -1,26 +1,15 @@
 package top.daoyang.spring.ioc.overview.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 public class User {
 
     private Long id;
 
     private String name;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     @Override
     public String toString() {
@@ -28,6 +17,20 @@ public class User {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
+    }
+
+    public static User createUser() {
+        User user = new User();
+        user.id = 10L;
+        user.name = "createByStaticFactory";
+        return user;
+    }
+
+    public User create() {
+        User user = new User();
+        user.id = 11L;
+        user.name = "createByInstantFactory";
+        return user;
     }
 
     public void init() {

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="dependency-injection.xml" />
+
+    <!-- 别名和bean是分开定义的, 并且别名是可以完全相同的, 别名相同的不同bean取得是最后一个-->
+
+    <bean id="staticFactoryUser" class="top.daoyang.spring.ioc.overview.domain.User" factory-method="createUser"/>
+
+    <bean id="instanceFactoryUser" factory-bean="user" factory-method="create" scope="prototype" />
+
+    <bean id="userFactoryBean" class="top.daoyang.spring.bean.factory.UserFactoryBean" />
+</beans>
