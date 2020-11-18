@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="user" class="top.daoyang.spring.ioc.overview.domain.User" init-method="init">
+    <bean id="user" class="top.daoyang.spring.ioc.overview.domain.User" primary="true" init-method="init">
         <property name="id" value="1" />
         <property name="name" value="daoyang" />
     </bean>
