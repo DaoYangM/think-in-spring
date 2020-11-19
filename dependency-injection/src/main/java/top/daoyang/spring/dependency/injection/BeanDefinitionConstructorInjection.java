@@ -6,9 +6,9 @@ import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import top.daoyang.spring.ioc.overview.domain.UserHolder;
 
 /**
- * {@link org.springframework.beans.factory.config.BeanDefinition 来手动setter注入依赖}
+ * {@link org.springframework.beans.factory.config.BeanDefinition }来手动constructor注入依赖
  */
-public class BeanDefinitionSetterInjection {
+public class BeanDefinitionConstructorInjection {
 
     public static void main(String[] args) {
         DefaultListableBeanFactory defaultListableBeanFactory = new DefaultListableBeanFactory();
@@ -19,7 +19,9 @@ public class BeanDefinitionSetterInjection {
         // BeanDefinitionBuilder
         BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.genericBeanDefinition(UserHolder.class);
 
-        beanDefinitionBuilder.addPropertyReference("user", "superUser");
+        // constructor 注入按照添加的顺序来选择constructor
+        beanDefinitionBuilder.addConstructorArgReference("user");
+        beanDefinitionBuilder.addConstructorArgReference("superUser");
 
         defaultListableBeanFactory.registerBeanDefinition("userHolder", beanDefinitionBuilder.getBeanDefinition());
 
