@@ -19,7 +19,7 @@
     </bean>
 
     <bean id="superUser2" class="top.daoyang.spring.ioc.overview.domain.SuperUser" parent="user">
-        <property name="title" value="123" />
+        <property name="title" value="124" />
     </bean>
 
     <bean id="objectFactory" class="org.springframework.beans.factory.config.ObjectFactoryCreatingFactoryBean">
