@@ -22,7 +22,7 @@ public class DependencyInject {
 //        UserRepository userRepository = beanFactory.getBean(UserRepository.class);
 
         // 依赖查找 找不到
-//        System.out.println(beanFactory.getBean(BeanFactory.class));
+        System.out.println(beanFactory.getBean(BeanFactory.class));
 
 //        System.out.println(beanFactory.getBean(Environment.class));
 //        System.out.println(userRepository.getBeanFactory());

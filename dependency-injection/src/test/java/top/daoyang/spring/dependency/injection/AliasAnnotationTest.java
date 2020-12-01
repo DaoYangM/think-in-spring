@@ -34,7 +34,7 @@ public class AliasAnnotationTest {
 
         /**
          * {@link org.springframework.core.annotation.AnnotationAwareOrderComparator}
-         * 对 {@link org.springframework.core.annotation.Order} 的排序做处理
+         * 对 {@link org.springframework.core.annotation.Order} 的排序做处理 order值小的在前
          *
          * @return an instance of user
          */
