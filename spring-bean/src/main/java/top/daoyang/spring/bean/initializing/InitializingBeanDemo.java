@@ -10,7 +10,7 @@ public class InitializingBeanDemo {
 
     public static void main(String[] args) {
 
-        // postConstruct -> initMethod -> afterPropertiesSet
+        // postConstruct -> afterPropertiesSet -> initMethod
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
         applicationContext.register(InitializingBeanDemo.class);
 
@@ -20,7 +20,7 @@ public class InitializingBeanDemo {
 
     // 需要的时候进行初始化
     @Bean(initMethod = "initMethod")
-    @Lazy(value = false)
+//    @Lazy(value = false)
     public UserController userController() {
         return new UserController();
     }

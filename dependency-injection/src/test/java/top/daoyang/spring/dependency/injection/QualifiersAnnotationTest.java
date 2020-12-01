@@ -14,6 +14,7 @@ import top.daoyang.spring.dependency.injection.annotation.SuperUser;
 import top.daoyang.spring.ioc.overview.domain.User;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * {@link Qualifier} 自定义Qualifier注解使用
@@ -81,5 +82,9 @@ class QualifiersAnnotationTest {
     public void getAllUsers() {
         QualifiersAnnotationTest qualifiersAnnotationTest = applicationContext.getBean(getClass());
         System.out.println("qualifiersAnnotationTest.allUsers = " + qualifiersAnnotationTest.allUsers);
+
+        Map<String, User> beansOfType = applicationContext.getBeansOfType(User.class);
+
+        System.out.println("beansOfType = " + beansOfType);
     }
 }

@@ -15,15 +15,15 @@ public class BeanFactoryXMLContainer {
     public static void main(String[] args) {
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
         XmlBeanDefinitionReader xmlBeanDefinitionReader = new XmlBeanDefinitionReader(beanFactory);
-        System.out.println(xmlBeanDefinitionReader.loadBeanDefinitions("META-INF/dependency-lookup.xml"));
+        xmlBeanDefinitionReader.loadBeanDefinitions("META-INF/dependency-lookup.xml");
 
         System.out.println(beanFactory.getBeansOfType(User.class));
-
-        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(BeanFactoryXMLContainer.class);
-        System.out.println(applicationContext.getBean(User.class));
+//
+//        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(BeanFactoryXMLContainer.class);
+//        System.out.println(applicationContext.getBean(User.class));
     }
 
-    @Bean
+    @Bean(initMethod = "init")
     public User user () {
         return new User();
     }
