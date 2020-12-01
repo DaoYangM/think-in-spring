@@ -80,3 +80,5 @@ fabric.properties
 
 think-in-spring.iml
 /**/target
+
+/**/*.iml
