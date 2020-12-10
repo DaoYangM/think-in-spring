@@ -66,6 +66,9 @@ class DependencySourceTest {
         Assertions.assertEquals("appName", configurationClass.appName);
     }
 
+    /**
+     * 外部化配置最为依赖注入来源
+     */
     @Configuration
     @PropertySource("classpath:/META-INF/app.properties")
     public static class ConfigurationClass {
