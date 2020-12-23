@@ -9,17 +9,8 @@
         <property name="name" value="daoyang" />
     </bean>
 
-    <bean id="user2" class="top.daoyang.spring.ioc.overview.domain.User" init-method="init">
-        <property name="id" value="2" />
-        <property name="name" value="daoyang" />
-    </bean>
-
     <bean id="superUser" class="top.daoyang.spring.ioc.overview.domain.SuperUser" parent="user" primary="true">
         <property name="title" value="123" />
-    </bean>
-
-    <bean id="superUser2" class="top.daoyang.spring.ioc.overview.domain.SuperUser" parent="user">
-        <property name="title" value="124" />
     </bean>
 
     <bean id="objectFactory" class="org.springframework.beans.factory.config.ObjectFactoryCreatingFactoryBean">
