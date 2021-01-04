@@ -1,3 +1,5 @@
+package top.daoyang.bean.lifecycle;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.ObjectProvider;
