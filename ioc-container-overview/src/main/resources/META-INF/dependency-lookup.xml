@@ -20,4 +20,9 @@
     <bean id="objectFactory" class="org.springframework.beans.factory.config.ObjectFactoryCreatingFactoryBean">
         <property name="targetBeanName" value="user" />
     </bean>
+
+    <bean id="userHolder" class="top.daoyang.spring.ioc.overview.domain.UserHolder" init-method="initMethod"
+          destroy-method="destroyMethod">
+        <property name="id" value="1"/>
+    </bean>
 </beans>
