@@ -16,7 +16,10 @@
         <module>bean-scope</module>
         <module>bean-lifecycle</module>
         <module>configuration-metadata</module>
+        <module>circular-dependency</module>
         <module>resource</module>
+        <module>validation</module>
+        <module>data-binding</module>
     </modules>
     <packaging>pom</packaging>
 
